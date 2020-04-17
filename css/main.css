@@ -15,23 +15,24 @@
 }
 
 .btn-main {
-  color: #333;
+  color: #fff;
   background-color: #ffbc00;
 }
 
 .btn-light {
-  color: #333;
+  color: #000;
   background-color: #f4f4f4;
 }
 
 .btn-dark {
-  color: #f4f4f4;
+  color: #fff;
   background-color: #333;
 }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
+  color: #fff;
   background-color: #ffbc00;
 }
 
@@ -428,7 +429,7 @@ img {
 #about-a .about-info {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "bioimage bio bio" "award-1 award-2 award-3";
+      grid-template-areas: "bioimage bio bio" "award-1 award-2 award-3";
   grid-gap: 1.2rem;
 }
 
@@ -529,6 +530,87 @@ img {
   height: 50px;
   border-radius: 50%;
   margin-right: 0.5rem;
+}
+
+#contact-a .text-fields {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'name email' 'subject phone' 'message message';
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+#contact-a .text-fields .name-input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+}
+
+#contact-a .text-fields .email-input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: email;
+}
+
+#contact-a .text-fields .subject-input {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: subject;
+}
+
+#contact-a .text-fields .phone-input {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: phone;
+}
+
+#contact-a .text-fields .message-input {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: message;
+  height: 100px;
+}
+
+#contact-a .text-fields input,
+#contact-a .text-fields textarea {
+  border: 1px #ddd solid;
+}
+
+#contact-a .text-fields input:focus,
+#contact-a .text-fields textarea:focus {
+  outline: none;
+  border-color: #ffbc00;
+}
+
+#contact-a .text-fields .text-input {
+  padding: 0.5rem 1rem;
+}
+
+#contact-a button[type='submit'] {
+  width: 50%;
+}
+
+#contact-b .contact-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#contact-c {
+  height: 100%;
+}
+
+#contact-c h1 {
+  font-size: 4rem;
 }
 
 #main-footer {
